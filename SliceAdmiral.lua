@@ -424,68 +424,33 @@ function addon:UNIT_MAXPOWER(...)
 	end
 end
 
-local function MasterOfSubtley()
-	local subtlety = SA_Spells[31665].name
-	local name, _, _, _, _, _, expirationTime = UnitAura("player", subtlety);
-	local MOSBar = SA_Data.BARS[subtlety]
-
-	if name then		
-		MOSBar["Expires"] = expirationTime;		
-		MOSBar["tickStart"] = (expirationTime or 0) - SAMod.Sound[31665].tickStart;					
-		MOSBar["LastTick"] = MOSBar["tickStart"] - 1.0;
-		--MOSBar["count"] = count or 0;
-		MOSBar["obj"]:Show();
-	end
-end
-
-local function Subterfuge()    
-	local expirationTime = GetTime() + 3.0
-	local SubBar = SA_Data.BARS[SA_Spells[115192].name]
-
-	SubBar["Expires"] = expirationTime;		
-	SubBar["tickStart"] = (expirationTime or 0) - SAMod.Sound[115192].tickStart;					
-	SubBar["LastTick"] = SubBar["tickStart"] - 1.0;	
-	SubBar["obj"]:Show();
-end
-
 local dbtypes = { SPELL_AURA_REFRESH = true,
-SPELL_AURA_APPLIED = true,
-SPELL_AURA_REMOVED = true,
-SPELL_AURA_APPLIED_DOSE  = true,
-SPELL_PERIODIC_AURA_REMOVED = true,
-SPELL_PERIODIC_AURA_APPLIED = true,
-SPELL_PERIODIC_AURA_APPLIED_DOSE = true,
-SPELL_PERIODIC_AURA_REFRESH = true,
-	};
-	local dotEvents = { SPELL_DAMAGE = true,
+					SPELL_AURA_APPLIED = true,
+					SPELL_AURA_REMOVED = true,
+					SPELL_AURA_APPLIED_DOSE  = true,
+					SPELL_PERIODIC_AURA_REMOVED = true,
+					SPELL_PERIODIC_AURA_APPLIED = true,
+					SPELL_PERIODIC_AURA_APPLIED_DOSE = true,
+					SPELL_PERIODIC_AURA_REFRESH = true,
+};
+	
+local dotEvents = { 
+	SPELL_DAMAGE = true,
 	SPELL_PERIODIC_DAMAGE = true,
 	SPELL_PERIODIC_HEAL = true,
 };
-local specialEvent = { SPELL_DAMAGE = true,
-SPELL_AURA_APPLIED = true,
-SPELL_AURA_REMOVED = true,
-SPELL_AURA_REFRESH = true,
+
+local specialEvent = { 
+	SPELL_DAMAGE = true,
+	SPELL_AURA_APPLIED = true,
+	SPELL_AURA_REMOVED = true,
+	SPELL_AURA_REFRESH = true,
 }; 
-local deathEvent = { UNIT_DIED = true,
-UNIT_DESTROYED = true,
-UNIT_DISSIPATES = true,
+local deathEvent = { 
+	UNIT_DIED = true,
+	UNIT_DESTROYED = true,
+	UNIT_DISSIPATES = true,
 };
-local function GCD()
-	if not SAMod.ShowTimer[61304] then return end
-	local start, duration, enabled = GetSpellCooldown(61304) 
-	local GCD = SA_Data.BARS[SA_Spells[61304].name]
-
-	if start > 0 then
-		GCD["Expires"] = start + duration;
-		GCD["tickStart"] = (start + duration or 0) - SAMod.Sound[61304].tickStart;
-		GCD["LastTick"] = GCD["tickStart"] - 1.5;
-		GCD["obj"]:Show();
-	end
-end
-
-local function Ghostly()
-	addon:BarUpdate(196937)
-end
 
 function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, sourceGUID, sourceName, sourceFlags, sourceRaidFlags, destGUID, destName, destFlags, destRaidFlags, spellId, ...)
 	if deathEvent[type] then
@@ -497,23 +462,36 @@ function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, s
 	if not isMySpell then 
 		return 
 	end;
+
+
 	local saTimerOp = SAMod.ShowTimer.Options
 	local select = select
 	local SA_Spells = SA_Spells
 	local SABars = SA_Data.BARS	
 	local isOnTarget = (destGUID == UnitGUID("target"))
 
+
 	--GCD();
 	if dbtypes[type] then
 		--Buffs EVENT --
 		if SAMod.ShowTimer[spellId] then
+			
+
 			local BuffBar = SA_Data.BARS[SA_Spells[spellId].name]
 			local spell = SA_Spells[spellId]
 			local name, rank, icon, count, debuffType, duration, expirationTime = UnitAura(spell.target, spell.name, nil, Sa_filter[spell.target])
+			--fix for absolute corruption
+			if spellId == 146739 and duration == 0 then
+				expirationTime = SA_Data.tNow + 666.5
+				duration = 666.5
+				count = 0
+			end
+
 			BuffBar["Expires"] = expirationTime or 0;
 			BuffBar["tickStart"] = (expirationTime or 0) - SAMod.Sound[spellId].tickStart;
 			BuffBar["LastTick"] = BuffBar["tickStart"] - 1.0;
 			BuffBar["count"] = count or 0;
+
 			if saTimerOp.Dynamic then addon:UpdateMaxValue(spellId,duration) end;
 			if not (name) then
 				BuffBar["obj"]:Hide();
@@ -528,7 +506,7 @@ function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, s
 	end
 	-- DOT monitors
 	if saTimerOp.ShowDoTDmg and dotEvents[type] and (isOnTarget or isOnMe) then
-		if SAMod.ShowTimer[spellId] or (spellId == 113780 and SAMod.ShowTimer[2818]) then
+		if SAMod.ShowTimer[spellId]then
 			local amount, _, _, _, _, _, critical,_ = select(3, ...)
 			local dotText
 			if spellId == 218615 then --attribute the "Harverster of Souls" artifact effect to corruption
@@ -536,6 +514,7 @@ function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, s
 			else
 				dotText = SABars[SA_Spells[spellId].name]["obj"].DoTtext
 			end
+
 			dotText:SetAlpha(1);
 			if (saTimerOp.DoTCrits and critical) then
 				dotText:SetFormattedText("*%.0f*", amount);
@@ -577,6 +556,14 @@ function addon:UpdateTarget()
 		if v and spell then
 			local spellBar = SA_Data.BARS[spell.name]
 			local name, _, _, count, _, duration, expirationTime, _ = UnitAura(spell.target, spell.name, nil, Sa_filter[spell.target]);
+
+			--fix for absolute corruption
+			if k == 146739 and duration == 0 then
+				expirationTime = SA_Data.tNow + 666.5
+				duration = 666.5
+				count = 0
+			end
+
 			if not (name) then				
 				spellBar["tickStart"] = 0;
 				spellBar["count"] = 0;
@@ -603,6 +590,13 @@ function addon:BarUpdate(id)
 	if SAMod.ShowTimer[id] then
 		local spellBar = SA_Data.BARS[spell.name]
 		local name, _, _, count, _, duration, expirationTime, _ = UnitAura(spell.target, spell.name, nil, Sa_filter[spell.target]);
+		--fix for absolute corruption
+		if id == 146739 and duration == 0 then
+			expirationTime = SA_Data.tNow + 666.5
+			duration = 666.5
+			count = 0
+		end
+
 		if not (name) then			
 			spellBar["tickStart"] = 0;
 			spellBar["count"] = 0;
@@ -1086,10 +1080,20 @@ local function SA_QuickUpdateBar(unit, spell)
 	local sa_time = sabars["Expires"];
 	local Showname = SAMod.ShowTimer.Options.ShowNames
 	local count = sabars["count"]
+	local duration = sa_time - SA_Data.tNow
+
+
 
 	if sa_time > SA_Data.tNow and sabars then
-		sabars["obj"]:SetValue(sa_time-SA_Data.tNow);
-		sabars["obj"].text:SetFormattedText("%0.1f", sa_time - SA_Data.tNow);
+		if spell == "Corruption" and duration > 600 then
+					sabars["obj"]:SetValue(666);
+		sabars["obj"].text:SetFormattedText("666");
+
+		else
+					sabars["obj"]:SetValue(duration);
+		sabars["obj"].text:SetFormattedText("%0.1f", duration);
+	end
+
 		sabars["obj"].count:SetFormattedText(count > 1 and Showname and string.format("%s (%d)",spell,count) or Showname and spell or count > 1 and count or "");
 	else
 		sabars["obj"]:Hide();
