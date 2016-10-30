@@ -140,9 +140,6 @@ options.args = {
 		end
 	end
 	
-	options.args.Subtlety.args[SA_Spells[1943].name] = options.args.Assassination.args[SA_Spells[1943].name];
-	options.args.Subtlety.args[SA_Spells[2818].name] = options.args.Assassination.args[SA_Spells[2818].name];
-
 	pandemic(SAMod.ShowTimer.Options.Dynamic)
 	
 end

@@ -34,7 +34,7 @@ SADefault = {
 			Width = 140,
 			BarMargin = 1,
 			Fade = 75,
-			BarTexture = "LiteStep",
+			BarTexture = "BantoBar",
 		},
 		ShowTimer = {
 			Options = {
@@ -43,100 +43,34 @@ SADefault = {
 				Dynamic = false,
 				ShowDoTDmg = true,
 				DoTCrits = true,
-				BarTexture = "Smooth",
+				BarTexture = "BantoBar",
 				guileCount = false,
 				BladeFlurry = false,
 				ShowNames = false,
 			},
 			Colours = { 
-				[5171] = { r=255/255, g=74/255, b=18/255, a=0.9,},				
-				[2818] =  {r=96/255, g=116/255, b=65/255,},
-				[1943] = {r=130/255, g=15/255, b=0,},
-				[1966]  = {r=155/255, g=155/255, b=255/255,},
-				[703] = {r=130/255, g=15/255, b=0,},
-				[115189] = {r=121/255,g=30/255,b=28/255,},
-				[137573] = {r=135/255, g=135/255, b=255/255,},
-				[154953] = {r=205/255, g=92/255, b=92/255,},
-				[79140] = {r=130/255, g=130/255, b=0,},
-				[32645] = {r=66/255, g=86/255, b=35/255,},
-				[84617] =  {r=139/255, g=69/255, b=19/255,},
-				[13750] = {r=240/255,g=128/255,b=128/255,},
-				[186286] = {r=240/255,g=128/255,b=128/255,},
-				[16511] = {r=255/255, g=5/255, b=5/255,},
-				[91021] = {r=130/255, g=130/255, b=0,},
-				[31665] = {r=99/255, g=26/255, b=151/255,},
-				[61304] = {r=192/255,g=192/255,b=192/255},
-				[137619] = {r=0,g=0,b=0},
-				[74001] = {r=0,g=0,b=0},
-				[408] = {r=0,g=0,b=0},
-				[26679] = {r=0,g=0,b=0},
-				[31224] = {r=0,g=0,b=0},
-				[152151] = {r=0,g=0,b=0},
-				[5277] = {r=0,g=0,b=0},
-				[1776] = {r=0,g=0,b=0},
-				[2983]  = {r=0,g=0,b=0},
-				[2094]  = {r=0,g=0,b=0},
-				[115192] = {r=0,g=0,b=0},
+				[980] = {r=0.36, g=0.1, b=0.776}, --Agony
+				[63106] = {r=0.01, g=0.77, b=0.0}, --Siphon Life
+				[146739] = {r=0.56, g=0.0, b=0.0}, --Corruption
+				[205179] = {r=0.66, g=0.36, b=1.0}, --Phantom Singularity 
+				[216708] = {r=0.1, g=0.6, b=0.8}, -- Deadwind Harvester 
+				[233490] = {r=1.0, g=1.0, b=0.0}, -- Unstable Affliction 
 			},
 			Timers = {
-				[5171] = 6.0, --Slice and Dice
-				[1943] = 6.0, --Rupture
-				[115189] = 6.0, -- Anticipation				
-				[32645] = 6.0, -- Envenom
-				[1966] = 5.0, -- Feint
-				[137573] = 4.0, -- Burst of Speed
-				[16511] = 6.0, --Hemorrhage
-				[2818] = 6.0, --DeadlyPoison
-				[79140] = 6.0, --Vendetta
-				[84617] = 6.0, --RevealingStrike
-				[703] = 6.0, -- Garrote
-				[13750] = 6.0, --Adrenaline Rush
-				[186286] = 4.0,
-				[154953] = 6.0, --InteralBleeding
-				[91021] = 6.0, --FindWeaknes
-				[31665]= 5.0, --Master of Subtlety´
-				[61304] = 1.0, --GCD
-				[137619] = 6.0, --Marked for death
-				[74001] = 6.0,
-				[408] = 6.0,
-				[26679] = 6.0,
-				[31224] = 5.0,
-				[152151] = 6.0,
-				[5277] = 6.0,
-				[1776] = 4.0,
-				[2983]= 6.0,
-				[2094] = 6.0,
-				[115192] = 3.0,
+				[980] = 5.4, --Agony
+				[63106] = 4.5, --Siphon Life
+				[146739] = 4.0, --Corruption
+				[205179] = 6.0, --Phantom Singularity
+				[216708] = 6.0, -- Deadwind Harvester
+				[233490] = 6.0, -- Unstable Affliction
 			},
-			[5171] = true, --Slice and Dice
-			[1943] = true, --Rupture
-			[115189] = false, -- Anticipation			
-			[32645] = true, -- Envenom
-			[1966] = true, -- Feint
-			[137573] = false, -- Burst of Speed
-			[91021] = true, --FindWeaknes
-			[16511] = true, --Hemorrhage
-			[2818] = true, --DeadlyPoison
-			[79140] = false, --Vendetta
-			[84617] = true, --RevealingStrike
-			[703] = true, -- Garrote
-			[13750] = true, --Adrenaline Rush
-			[186286] = true,
-			[154953] = false, --InteralBleeding
-			[31665] = true, -- master of Subtlety
-			[61304] = false, --GCD
-			[137619] = false, --Marked for death
-			[74001] = false,
-			[408] = false,
-			[26679] = false,
-			[31224] = false,
-			[152151] = false,
-			[5277] = false,
-			[1776] = false,
-			[2983]= false,
-			[2094] = false,
-			[115192] = false,
-		},
+			[980] = true, --Agony
+			[63106] = true, --Siphon Life
+			[146739] = true, --Corruption
+			[205179] = true, -- Phantom Singluarity
+			[216708] = true, -- Deadwind Harvester
+			[233490] = false, -- Unstable Affliction
+			},
 		Combo = {
 			PointShow = true,
 			Texture = "Grid",
@@ -147,12 +81,12 @@ SADefault = {
 			AnColor = {r=1.0,g=0.15,b=0.2,a=1.0},
 		},
 		Energy  = {
-			ShowEnergy = false,
+			ShowEnergy = true,
 			ShowComboText = true,
 			AnticpationText = true,
 			Energy1 = 25,
 			Energy2 = 40,
-			BarTexture = "Runes",
+			BarTexture = "BantoBar",
 			EnergySound1 = "",
 			EnergySound2 = "",
 			EnergyTrans = 75,
@@ -161,37 +95,15 @@ SADefault = {
 			ComboTextColor = { r=1.0, g=1.0, b=1.0, a=0.8},
 		},
 		Sound = {
-			[5171] = {enabled=true, tick = "Tambourine", alert = "Waaaah",tickStart=3.0, }, --Slice and Dice			
-			[1943] = {enabled=true, tick = "Shaker", alert = "BassDrum", tickStart=3.0, }, --Rupture
-			[79140] = {enabled=true, tick = "Ping", alert = "None", tickStart=3.0, }, --Vendetta
-			[84617] = {enabled=true, tick = "BassDrum", alert = "Shaker", tickStart=3.0, },--RevealingStrike
-			[16511] = {enabled=true, tick = "Ping", alert = "None", tickStart=3.0, }, --Hemorrhage
-			[84745] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[115189] = {enabled=false, tick = "None", alert="None", tickStart=3.0, }, -- Anticipation
-			[1966] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[32645]  = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[186286] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[137573] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[2818] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[703] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[13750] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[154953] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[91021] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[31665] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[61304] = {enabled=false, tick= "None", alert="None", tickStart=0.5, },
-			[137619] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[74001] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[408] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[26679] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[31224] ={enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[152151]= {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[5277] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[1776] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[2983] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[2094] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
-			[115192] = {enabled=false, tick = "None", alert="None", tickStart=3.0, },
+			[980] = {enabled=true, tick = "Shaker", alert = "BassDrum", tickStart=5.4, }, --Agony
+			[63106] = {enabled=false, tick = "Cowbell", alert = "You Spin Me", tickStart=4.5, }, --Siphon Life
+			[146739] = {enabled=false, tick = "Tambourine", alert = "Waaaah", tickStart=4.0, }, --Corruption
+			[205179] = {enabled=false, tick="None", alter="None",tickStart=3.0}, -- Phantom Singularity
+			[216708] = {enabled=false, tick="None", alter="None",tickStart=3.0}, -- Deadwind Harvester
+			[233490] = {enabled=false, tick = "Ping", alert = "None", tickStart=3.0, }, --Unstable Affliction
+
 			MasterVolume = false,
-			OutOfCombat = false,
+			OutOfCombat = true,
 			none = "none",
 		},
 	},  
@@ -216,16 +128,16 @@ SA_Data = {
 	tNow = 0,
 	sinister = true,
 	BARS = { --TEH BARS
-		["CP"] = {
-			["obj"] = 0
-		},
-		["Stat"] = {
-			["obj"] = 0,
-		},
-		["tmp"] = {
-			["obj"] = 0,
-		},
-	}
+	["CP"] = {
+		["obj"] = 0
+	},
+	["Stat"] = {
+		["obj"] = 0,
+	},
+	["tmp"] = {
+		["obj"] = 0,
+	},
+}
 };
 
 local scaleUI = 0
@@ -245,8 +157,8 @@ local bfhits = {}
 local soundBuffer = {}
 
 local Sa_filter = {	["player"] = "PLAYER", 
-					["target"] = "PLAYER HARMFUL",
-					["pet"] = "PLAYER HARMFUL", };
+["target"] = "PLAYER HARMFUL",
+["pet"] = "PLAYER HARMFUL", };
 
 local function Lsort(a,b)
 	return floor(a["Expires"]) < floor(b["Expires"]); -- No need for decimals
@@ -256,44 +168,44 @@ local function idSort(a,b)
 end
 
 local function tablelength(T)
-  local count = 0
-  for _ in pairs(T) do count = count + 1 end
-  return count
+	local count = 0
+	for _ in pairs(T) do count = count + 1 end
+	return count
 end
 
 function addon:SA_SetScale(NewScale)
-  if (NewScale >= 50) then
-    SA:SetScale ( NewScale / 100 );
-    VTimerEnergy:SetScale ( NewScale / 100 );
-	for k in pairs(SA_Data.BARS) do
-		SA_Data.BARS[k]["obj"]:SetScale(NewScale/100);
+	if (NewScale >= 50) then
+		SA:SetScale ( NewScale / 100 );
+		VTimerEnergy:SetScale ( NewScale / 100 );
+		for k in pairs(SA_Data.BARS) do
+			SA_Data.BARS[k]["obj"]:SetScale(NewScale/100);
+		end
 	end
-  end
 end
 
 function addon:SA_SetWidth(w)
-  if (w >= 25) then
-    VTimerEnergy:SetWidth(w);
-	for k in pairs(SA_Data.BARS) do
-		if not (k == "CP" or k == "Stat") then
-			SA_Data.BARS[k]["obj"]:SetWidth(w-12);
+	if (w >= 25) then
+		VTimerEnergy:SetWidth(w);
+		for k in pairs(SA_Data.BARS) do
+			if not (k == "CP" or k == "Stat") then
+				SA_Data.BARS[k]["obj"]:SetWidth(w-12);
+			end
+		end	
+		if SAMod.Energy.ShowEnergy then
+			VTimerEnergy:Show();
+			local UnitPowerMax = UnitPowerMax("player",SPELL_POWER_ENERGY)
+			if (UnitPowerMax == 0) then
+				UnitPowerMax = 100;
+			end
+--			SA_Spark1:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", (SAMod.Energy.Energy1 / UnitPowerMax * w), 0);
+	--		SA_Spark2:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", (SAMod.Energy.Energy2 / UnitPowerMax * w), 0);
+		else
+			VTimerEnergy:Hide();
 		end
-	end	
-	if SAMod.Energy.ShowEnergy then
-		VTimerEnergy:Show();
-		local UnitPowerMax = UnitPowerMax("player",SPELL_POWER_ENERGY)
-		if (UnitPowerMax == 0) then
-			UnitPowerMax = 100;
-		end
-		SA_Spark1:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", (SAMod.Energy.Energy1 / UnitPowerMax * w), 0);
-		SA_Spark2:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", (SAMod.Energy.Energy2 / UnitPowerMax * w), 0);
-	else
-		VTimerEnergy:Hide();
+		addon:SA_UpdateCPWidths(w);
+		addon:SA_UpdateStatWidths(w);
+
 	end
-    addon:SA_UpdateCPWidths(w);
-    addon:SA_UpdateStatWidths(w);
-	
-  end
 end
 
 function addon:RetextureBars(texture, object)
@@ -355,38 +267,38 @@ function addon:PlayBuffer()
 end
 
 function addon:SA_ChangeAnchor()
- local LastAnchor = SA;
- local FirstAnchor = SA;
- local offSetSize = SAMod.Main.BarMargin; -- other good values, -1, -2 
- local opt = SAMod.ShowTimer.Options
- local statsBar = SA_Data.BARS["Stat"]["obj"]
- local cpBar = SA_Data.BARS["CP"]["obj"]
- table.sort(SA_Data.BARORDER, idSort) --Fix for Roll the bone
- table.sort(SA_Data.BARORDER, Lsort)
- 
- -- Stat bar goes first, because it's fucking awesome like that
- if SAMod.Combo.ShowStatBar then 	
-	statsBar:ClearAllPoints();
-	statsBar:SetPoint("TOPLEFT", LastAnchor, "BOTTOMLEFT", 0, -1 * offSetSize);
-	FirstAnchor = statsBar;
-	LastAnchor = statsBar;
- end
+	local LastAnchor = SA;
+	local FirstAnchor = SA;
+	local offSetSize = SAMod.Main.BarMargin; -- other good values, -1, -2 
+	local opt = SAMod.ShowTimer.Options
+	local statsBar = SA_Data.BARS["Stat"]["obj"]
+	local cpBar = SA_Data.BARS["CP"]["obj"]
+	table.sort(SA_Data.BARORDER, idSort) --Fix for Roll the bone
+	table.sort(SA_Data.BARORDER, Lsort)
 
- --anchor CPs on stat bar if energy bar is hidden.
- if SAMod.Energy.ShowEnergy then	
-	VTimerEnergy:ClearAllPoints()
-	VTimerEnergy:SetPoint("TOPLEFT", LastAnchor, "BOTTOMLEFT", 0, -1 * offSetSize); 
-	if not (FirstAnchor == statsBar) then FirstAnchor = VTimerEnergy end
-	LastAnchor = VTimerEnergy;
- end
+	-- Stat bar goes first, because it's fucking awesome like that
+	if SAMod.Combo.ShowStatBar then 	
+		statsBar:ClearAllPoints();
+		statsBar:SetPoint("TOPLEFT", LastAnchor, "BOTTOMLEFT", 0, -1 * offSetSize);
+		FirstAnchor = statsBar;
+		LastAnchor = statsBar;
+	end
 
- -- CP Bar --
- if SAMod.Combo.PointShow then
-	cpBar:ClearAllPoints(); --so it can move
-	cpBar:SetPoint("TOPLEFT", LastAnchor, "BOTTOMLEFT", 0, -1 * offSetSize); --CP bar on bottom of Stat Bar
-	if (FirstAnchor == SA) then FirstAnchor = cpBar end
-	LastAnchor = cpBar
-end
+	--anchor CPs on stat bar if energy bar is hidden.
+	if SAMod.Energy.ShowEnergy then	
+		VTimerEnergy:ClearAllPoints()
+		VTimerEnergy:SetPoint("TOPLEFT", LastAnchor, "BOTTOMLEFT", 0, -1 * offSetSize); 
+		if not (FirstAnchor == statsBar) then FirstAnchor = VTimerEnergy end
+		LastAnchor = VTimerEnergy;
+	end
+
+	-- CP Bar --
+	if SAMod.Combo.PointShow then
+		cpBar:ClearAllPoints(); --so it can move
+		cpBar:SetPoint("TOPLEFT", LastAnchor, "BOTTOMLEFT", 0, -1 * offSetSize); --CP bar on bottom of Stat Bar
+		if (FirstAnchor == SA) then FirstAnchor = cpBar end
+		LastAnchor = cpBar
+	end
 
 	local tmp = SA_Data.BARS["tmp"]["obj"]
 	if opt.Barsup then
@@ -396,7 +308,7 @@ end
 		tmp:SetPoint("TOPLEFT",LastAnchor,"BOTTOMLEFT",12,12);
 	end
 	LastAnchor = tmp 
-	
+
 	local function sortBar(SortBar)
 		if (SortBar["Expires"] > SA_Data.tNow) and SortBar["obj"]:IsShown() then
 			SortBar["obj"]:ClearAllPoints();
@@ -408,14 +320,14 @@ end
 			LastAnchor = SortBar["obj"];
 		end
 	end
-	
+
 	for i = 1, #SA_Data.BARORDER do 
 		sortBar(SA_Data.BARORDER[i])		
 	end
 	for i = 1, #SA_Data.TOPORDER do
 		sortBar(SA_Data.TOPORDER[i])
 	end 
-	
+
 end
 
 function addon:PET_BATTLE_OPENING_START()
@@ -428,7 +340,8 @@ end
 
 function addon:PLAYER_ENTERING_WORLD(...)
 	addon:UpdateTarget();
-	addon:SetComboPoints();  
+	addon:UpdateSoulShards();  
+	addon:UpdateTormentedSouls();
 end
 
 function addon:PLAYER_TARGET_CHANGED(...)
@@ -452,7 +365,8 @@ function addon:UNIT_AURA(Time, arg1)
 	end
 	if arg1 == "player" then
 		addon:UpdateTarget()
-		addon:SetComboPoints();
+		addon:UpdateSoulShards();
+		addon:UpdateTormentedSouls();
 	end
 end
 
@@ -485,21 +399,8 @@ end
 
 function addon:UNIT_POWER_FREQUENT(Time,arg1,arg2)
 	if not arg1 == "player" then return false end;
-	if SAMod.Energy.ShowEnergy and arg2 == "ENERGY" then
-		local alpha = VTimerEnergy:GetAlpha()
-		local eTransp = SAMod.Energy.EnergyTrans / 100.0;
-		local power = UnitPower("player",SPELL_POWER_ENERGY)
-		local powermax = UnitPowerMax("player",SPELL_POWER_ENERGY)
-		VTimerEnergy:SetValue(UnitPower("player",SPELL_POWER_ENERGY));
-		if (powermax == power) and not (alpha == eTransp) then
-			UIFrameFadeOut(VTimerEnergy, 0.4, alpha, eTransp)
-		elseif not (powermax == power) and not (alpha == 1.0) then
-			UIFrameFadeIn(VTimerEnergy, 0.4, alpha, 1.0);
-		end
-		return true
-	end
-	if arg2 == "COMBO_POINTS" then
-		addon:SetComboPoints();
+	if arg2 == "SOUL_SHARDS" then
+		--addon:UpdateSoulShards();
 		return true
 	end
 end
@@ -507,10 +408,10 @@ end
 function addon:UNIT_MAXPOWER(...)
 	local cpBar = SA_Data.BARS["CP"]["obj"]
 	if SAMod.Energy.ShowEnergy then
-		VTimerEnergy:SetMinMaxValues(0,UnitPowerMax("player",SPELL_POWER_ENERGY));
-		VTimerEnergy:SetValue(UnitPower("player",SPELL_POWER_ENERGY))		
+		VTimerEnergy:SetMinMaxValues(0, 12);
+		VTimerEnergy:SetValue(0)		
 	end
-	maxCP = UnitPowerMax("player",SPELL_POWER_COMBO_POINTS)
+	maxCP = UnitPowerMax("player",SPELL_POWER_SOUL_SHARDS)
 	if maxCP == 8 then
 		cpBar.combo:SetMinMaxValues(0,5)		
 	else
@@ -527,7 +428,7 @@ local function MasterOfSubtley()
 	local subtlety = SA_Spells[31665].name
 	local name, _, _, _, _, _, expirationTime = UnitAura("player", subtlety);
 	local MOSBar = SA_Data.BARS[subtlety]
-	
+
 	if name then		
 		MOSBar["Expires"] = expirationTime;		
 		MOSBar["tickStart"] = (expirationTime or 0) - SAMod.Sound[31665].tickStart;					
@@ -540,7 +441,7 @@ end
 local function Subterfuge()    
 	local expirationTime = GetTime() + 3.0
 	local SubBar = SA_Data.BARS[SA_Spells[115192].name]
-	
+
 	SubBar["Expires"] = expirationTime;		
 	SubBar["tickStart"] = (expirationTime or 0) - SAMod.Sound[115192].tickStart;					
 	SubBar["LastTick"] = SubBar["tickStart"] - 1.0;	
@@ -548,36 +449,36 @@ local function Subterfuge()
 end
 
 local dbtypes = { SPELL_AURA_REFRESH = true,
-	SPELL_AURA_APPLIED = true,
-	SPELL_AURA_REMOVED = true,
-	SPELL_AURA_APPLIED_DOSE  = true,
-	SPELL_PERIODIC_AURA_REMOVED = true,
-	SPELL_PERIODIC_AURA_APPLIED = true,
-	SPELL_PERIODIC_AURA_APPLIED_DOSE = true,
-	SPELL_PERIODIC_AURA_REFRESH = true,
+SPELL_AURA_APPLIED = true,
+SPELL_AURA_REMOVED = true,
+SPELL_AURA_APPLIED_DOSE  = true,
+SPELL_PERIODIC_AURA_REMOVED = true,
+SPELL_PERIODIC_AURA_APPLIED = true,
+SPELL_PERIODIC_AURA_APPLIED_DOSE = true,
+SPELL_PERIODIC_AURA_REFRESH = true,
 	};
-local dotEvents = { SPELL_DAMAGE = true,
+	local dotEvents = { SPELL_DAMAGE = true,
 	SPELL_PERIODIC_DAMAGE = true,
 	SPELL_PERIODIC_HEAL = true,
 };
 local specialEvent = { SPELL_DAMAGE = true,
-	SPELL_AURA_APPLIED = true,
-	SPELL_AURA_REMOVED = true,
-	SPELL_AURA_REFRESH = true,
+SPELL_AURA_APPLIED = true,
+SPELL_AURA_REMOVED = true,
+SPELL_AURA_REFRESH = true,
 }; 
 local deathEvent = { UNIT_DIED = true,
-	UNIT_DESTROYED = true,
-	UNIT_DISSIPATES = true,
+UNIT_DESTROYED = true,
+UNIT_DISSIPATES = true,
 };
 local function GCD()
 	if not SAMod.ShowTimer[61304] then return end
 	local start, duration, enabled = GetSpellCooldown(61304) 
 	local GCD = SA_Data.BARS[SA_Spells[61304].name]
-	
+
 	if start > 0 then
 		GCD["Expires"] = start + duration;
 		GCD["tickStart"] = (start + duration or 0) - SAMod.Sound[61304].tickStart;
-		GCD["LastTick"] = GCD["tickStart"] - 1.0;
+		GCD["LastTick"] = GCD["tickStart"] - 1.5;
 		GCD["obj"]:Show();
 	end
 end
@@ -592,23 +493,17 @@ function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, s
 		return
 	end	
 	local isOnMe = (destGUID  == UnitGUID("player"))	
-	if type == "SPELL_ENERGIZE" then
-		if spellId == 196937 then
-			C_Timer.After(0.2, Ghostly) --Ghostly Strike wants to be special.
-		end
-		if spellId == 51699 and isOnMe then	--- 51699 HaT
-			addon:SetComboPoints("SPELL_ENERGIZE")
-		end
-		return
-	end
 	local isMySpell = (sourceGUID == UnitGUID("player"))
-	if not isMySpell then return end;
+	if not isMySpell then 
+		return 
+	end;
 	local saTimerOp = SAMod.ShowTimer.Options
 	local select = select
 	local SA_Spells = SA_Spells
 	local SABars = SA_Data.BARS	
-	local isOnTarget = (destGUID == UnitGUID("target"))	
-	GCD();
+	local isOnTarget = (destGUID == UnitGUID("target"))
+
+	--GCD();
 	if dbtypes[type] then
 		--Buffs EVENT --
 		if SAMod.ShowTimer[spellId] then
@@ -630,36 +525,14 @@ function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, s
 			end			
 			addon:SA_ChangeAnchor();
 		end
-		if isOnMe then
-
-			-- BladeFlurry Switch --
-			if spellId == 13877 and type == "SPELL_AURA_REMOVED" then
-				SA_Data.BARS["Stat"]["obj"].stats[3].lable:SetFormattedText("Speed")
-				SA_Data.BFActive = false
-				bfticker:Cancel()
-			elseif spellId == 13877 and type == "SPELL_AURA_APPLIED" and saTimerOp.BladeFlurry then				
-				SA_Data.BARS["Stat"]["obj"].stats[3].lable:SetFormattedText("Flurry")
-				SA_Data.BFActive = true
-				bfticker:Cancel()
-				bfticker = C_Timer.NewTicker(math.max(UnitAttackSpeed("player") or 0.1,1),addon.UpdateBFText)
-			end
-			-- Master of Subtlety Work around-- 
-			if type == "SPELL_AURA_REMOVED" and (spellId == 1784 or spellId == 115191) and SAMod.ShowTimer[31665] then
-				C_Timer.After(math.max(0.1, SA_Data.lag), MasterOfSubtley);
-			end
-			-- Subterfuge Work around-- 
-			if type == "SPELL_AURA_REMOVED" and spellId == 115191 and SAMod.ShowTimer[115192] then
-				C_Timer.After(math.max(0.1, SA_Data.lag), Subterfuge);
-			end
-		end
 	end
 	-- DOT monitors
 	if saTimerOp.ShowDoTDmg and dotEvents[type] and (isOnTarget or isOnMe) then
 		if SAMod.ShowTimer[spellId] or (spellId == 113780 and SAMod.ShowTimer[2818]) then
 			local amount, _, _, _, _, _, critical,_ = select(3, ...)
 			local dotText
-			if spellId == 113780 then
-				dotText = SABars[SA_Spells[2818].name]["obj"].DoTtext
+			if spellId == 218615 then --attribute the "Harverster of Souls" artifact effect to corruption
+				dotText = SABars[SA_Spells[146739].name]["obj"].DoTtext
 			else
 				dotText = SABars[SA_Spells[spellId].name]["obj"].DoTtext
 			end
@@ -673,32 +546,21 @@ function addon:COMBAT_LOG_EVENT_UNFILTERED(event, timestamp, type, hideCaster, s
 			end
 		end
 	end
-	if specialEvent[type] then		
-		local multistrike = select(13,...)
-		if 113780 == spellId then
-			local eventDeadlyPoison = SA_Spells[2818].name
-			local name, rank, icon, count, debuffType, duration, expirationTime = UnitDebuff("target", eventDeadlyPoison, nil, "PLAYER");
-			SABars[eventDeadlyPoison]["Expires"] = expirationTime or 0;
-			SABars[eventDeadlyPoison]["tickStart"] = (expirationTime or 0) - SAMod.Sound[2818].tickStart;
-			SABars[eventDeadlyPoison]["LastTick"] = SABars[eventDeadlyPoison]["tickStart"] - 1.0;
-		
-		elseif spellId == 22482 and saTimerOp.BladeFlurry then
-			bfhits[destGUID] = true
-			addon:UpdateBFText(true)
-		elseif spellId == 32645 or spellId == 53 or spellId == 8676 and multistrike then -- Sinister Calling / Envenom fix 
-			C_Timer.After(math.max(0.1, SA_Data.lag), addon.UpdateTarget); -- For some reason there must be a delay or it won't notice the new expiretime
-		end
-	end	
-	if type == "SPELL_AURA_REFRESH" then C_Timer.After(0.2, addon.UpdateTarget) end
+	if type == "SPELL_AURA_REFRESH" then 
+		C_Timer.After(0.2, addon.UpdateTarget) 
+	end
+	if type == "SPELL_AURA_APPLIED" then 
+		addon.UpdateTarget();
+	end
 end
 
 function addon:UpdateMaxValue(spellId,duration)
 	local SpellBar = SA_Data.BARS[SA_Spells[spellId].name]
 	local spelld = SA_Spells[spellId].duration
-	
+
 	if not duration then duration = spelld end;
 	local dynvalue = duration*0.3
-	
+
 	if duration > spelld then
 		dynvalue = spelld*0.3
 	end
@@ -709,7 +571,7 @@ end
 function addon:UpdateTarget()
 	local showT = SAMod.ShowTimer
 	local saTimerOp = SAMod.ShowTimer.Options
-	
+
 	for k,v in pairs(showT) do
 		local spell = SA_Spells[k]
 		if v and spell then
@@ -727,7 +589,9 @@ function addon:UpdateTarget()
 				if expirationTime > SA_Data.tNow then
 					spellBar["obj"]:Show();
 				end
-				if saTimerOp.Dynamic then addon:UpdateMaxValue(spell.id,duration) end
+				if saTimerOp.Dynamic then 
+					addon:UpdateMaxValue(spell.id,duration) 
+				end
 			end
 		end
 	end
@@ -756,42 +620,40 @@ function addon:BarUpdate(id)
 	end
 end
 
-function addon:SetComboPoints()
-	local points = UnitPower("player", SPELL_POWER_COMBO_POINTS); 
+function addon:UpdateTormentedSouls()
+	_, _, _, count, _, _, _, _, _, _, spellID, _, _, _, _, _, _, _, _ = UnitBuff("player", "Tormented Souls")
+	if not count then
+		count = 0
+	end
+	VTimerEnergy:SetMinMaxValues(0, 12);
+	VTimerEnergy:SetValue(count)
+	SA_Combo:SetFormattedText(count);
+end
+
+function addon:UpdateSoulShards()
+	local points = UnitPower("player", SPELL_POWER_SOUL_SHARDS); 
 	local cpBar = SA_Data.BARS["CP"]["obj"]
-	local count = points%5
-	local text = "0(0)"
-	
-	if maxCP == 8 then
-		text = string.format("%d(%d)",min(5,points),points == count and 0 or count)
-	else
-		text = points
-	end	
-	if (SAMod.Energy.ShowComboText) or (SAMod.Energy.AnticpationText) then
-		SA_Combo:SetFormattedText(text == 0 and "" or text == "0(0)" and "" or text );
+
+	if SAMod.Combo.PointShow then
+		cpBar.combo:SetValue(points);	
 	end
 
-	if SAMod.Combo.AnticipationShow then
-		cpBar.anti:SetValue(points == count and 0 or maxCP==8 and count or 0);
-	end
-	if SAMod.Combo.PointShow then
-		cpBar.combo:SetValue(maxCP == 8 and min(5,points) or points);	
-	end
+	return true
 end
 
 function addon:CreateComboFrame()
 	local f = CreateFrame("Frame", nil, SA);
 	local flvl = f:GetFrameLevel()
 	local bg = f:CreateTexture(nil, "BACKGROUND");
-	
+
 	local combo = CreateFrame("StatusBar", nil, f);
 	local anti = CreateFrame("StatusBar", nil, f);
 	local overlay = anti:CreateTexture(nil, "OVERLAY");
 	local width = VTimerEnergy:GetWidth();
 	local cpC = SAMod.Combo.CPColor
 	local cpA = SAMod.Combo.AnColor
-	local cpMax = UnitPowerMax("player",SPELL_POWER_COMBO_POINTS)
-	
+	local cpMax = UnitPowerMax("player",SPELL_POWER_SOUL_SHARDS)
+
 	f:ClearAllPoints();
 	f:SetSize(width, 10);
 	f:SetScale(scaleUI);
@@ -801,7 +663,7 @@ function addon:CreateComboFrame()
 	bg:SetAllPoints(f);
 	bg:SetVertexColor(0.3, 0.3, 0.3);
 	bg:SetAlpha(0.7);
-	
+
 	overlay:SetTexture("Interface\\Archeology\\ArcheologyToast");
 	overlay:SetAllPoints(f);
 	if cpMax == 6 then
@@ -818,7 +680,7 @@ function addon:CreateComboFrame()
 	combo:SetMinMaxValues(0, cpMax);
 	combo:SetValue(0);
 	combo:Show();
-	
+
 	anti:SetSize(width, 5);
 	anti:SetScale(scaleUI);
 	anti:SetFrameLevel(flvl+2);
@@ -828,7 +690,7 @@ function addon:CreateComboFrame()
 	anti:SetMinMaxValues(0, 3);
 	anti:SetValue(0);
 	anti:Show()	
-	
+
 	f:SetScript("OnMouseDown", function(self) if (not SAMod.Main.IsLocked) then SA:StartMoving() end end)
 	f:SetScript("OnMouseUp", function(self) SA:StopMovingOrSizing(); SAMod.Main.point, _l, _l, SAMod.Main.xOfs, SAMod.Main.yOfs = SA:GetPoint(); end )
 	f.bg = bg;
@@ -911,10 +773,10 @@ function addon:SA_CreateStatBar()
 	end
 
 	local fontstyle = "OUTLINE"
-	local lableText = {[1] = "AP",
-						[2] = "Crit",
-						[3] = "Speed",
-						[4] = "Insight" }
+	local lableText = {[1] = "Spell Power",
+	[2] = "Mastery",
+	[3] = "Haste",
+	[4] = "Insight" }
 	if SAMod.ShowTimer.Options.BladeFlurry and SA_Data.BFActive then lableText[3] = "Flurry" end
 	for i = 1, 4 do
 		--Create stat FontString
@@ -925,7 +787,7 @@ function addon:SA_CreateStatBar()
 		statText:SetFont(font, fontsize, fontstyle);
 		statText:SetPoint("TOPLEFT", f, "TOPLEFT", cur_location, 0)
 		statText:SetPoint("BOTTOMRIGHT", f, "BOTTOMLEFT", cur_location + cpwidth, 0)
-		
+
 		----Create stat label FontString
 		local labelFrame = f:CreateFontString("$parentLableText"..i,"ARTWORK","GameFontNormal");
 		labelFrame:SetPoint("TOPLEFT", f, "TOPLEFT", cur_location, 0)
@@ -933,11 +795,11 @@ function addon:SA_CreateStatBar()
 		labelFrame:SetJustifyV("BOTTOM")
 		labelFrame:SetFont(font, fontsize/1.6, "");
 		labelFrame:SetFormattedText("%s",lableText[i]);
-		
+
 		cur_location = cur_location + cpwidth + spacing;
 		f.stats[i] = statText
 		f.stats[i].lable = labelFrame
-		
+
 	end
 	f:SetScript("OnShow", addon.UpdateStats)	
 	f:SetScript("OnMouseDown", function(self) if (not SAMod.Main.IsLocked) then SA:StartMoving() end end)
@@ -946,19 +808,20 @@ function addon:SA_CreateStatBar()
 end
 
 function addon:SA_UpdateStats()
-	local baseAP, buffAP, negAP = UnitAttackPower("player");
-	local totalAP = baseAP+buffAP+negAP;
+	local shadowSP = GetSpellBonusDamage(6);
 	local guile = SA_Data.guile;
 	local barStats = SA_Data.BARS["Stat"]["obj"].stats
-	
-	barStats[1]:SetFormattedText(totalAP > 99999 and string.format("%.1fk", totalAP/1000) or BreakUpLargeNumbers(totalAP))
+	local mast, mast_coeff = GetMasteryEffect();
+	local mastery = mast * mast_coeff;
 
-	barStats[2]:SetFormattedText("%.1f%%", GetCritChance());
-	
-	barStats[3]:SetFormattedText(SAMod.ShowTimer.Options.BladeFlurry and SA_Data.BFActive and tablelength(bfhits) or "%.2f", UnitAttackSpeed("player"))
+	barStats[1]:SetFormattedText(shadowSP > 99999 and string.format("%.1fk", shadowSP/1000) or BreakUpLargeNumbers(shadowSP))
+
+	barStats[2]:SetFormattedText("%.1f%%", mast);
+
+	barStats[3]:SetFormattedText("%.1f%%", GetHaste());
 
 	barStats[4]:SetFormattedText(barStats[4] and "%s",SA_Data.guile);	
-		
+
 	if SAMod.Combo.HilightBuffed then
 		addon:SA_flashBuffedStats()
 	end
@@ -981,13 +844,13 @@ function addon:SA_flashBuffedStats()
 	statCheck[2] = (crit > (SA_Data.baseCrit * 1.5)) ;
 	statCheck[3] = (mhSpeed < (SA_Data.baseSpeed / 1.5));
 	statCheck[4] = (SA_Data.guile == 4 and UnitExists("target"));
-	
+
 	if SA_Data.BFActive then
 		statCheck[3] = (tablelength(bfhits) == 0);
 	end
-	
+
 	local barStats = SA_Data.BARS["Stat"]["obj"].stats
-	 
+
 	for i = 1, numStats do
 		local alpha = barStats[i]:GetAlpha();
 		if statCheck[i] and SAMod.Combo.HilightBuffed then
@@ -1011,24 +874,24 @@ function addon:SA_NewFrame()
 
 	f:SetSize(widthUI, 12);
 	f:SetScale(scaleUI); 
-	 
+
 	f:SetStatusBarTexture(addon:SA_BarTexture());
 	f:SetStatusBarColor(0.768627451, 0, 0, 1);
 	f:SetMinMaxValues(0, 6.0);
 	f:SetValue(0);
 
 	f:Hide();
-	
+
 	f:SetBackdrop({
-			bgFile="Interface\\AddOns\\SliceAdmiral\\Images\\winco_stripe_128.tga",
-			edgeFile="",
-			tile=true, tileSize=1, edgeSize=0,
-			insets={left=0, right=0, top=0, bottom=0}
-		});
+		bgFile="Interface\\AddOns\\SliceAdmiral\\Images\\winco_stripe_128.tga",
+		edgeFile="",
+		tile=true, tileSize=1, edgeSize=0,
+		insets={left=0, right=0, top=0, bottom=0}
+	});
 	f:SetBackdropBorderColor(1,1,1,1);
 	f:SetBackdropColor(0,0,0,0.5);
 
-	 -- text on the right --
+	-- text on the right --
 	f.text = f:CreateFontString(nil, nil, "GameFontWhite");
 	f.text:SetFontObject(SA_Data.BarFont2);
 	f.text:SetSize(30,10);
@@ -1042,14 +905,14 @@ function addon:SA_NewFrame()
 	f.icon:SetPoint("TOPLEFT", f, "TOPLEFT", -12, 0);
 	f.icon:SetBlendMode("DISABLE");
 
-	 -- text on the left --
+	-- text on the left --
 	f.count = f:CreateFontString(nil, nil, "GameFontWhite");
 	f.count:SetFontObject(SA_Data.BarFont2);
 	f.count:SetSize(80,10);
 	f.count:SetPoint("TOPLEFT", f, "TOPLEFT", 2,-1);
 	f.count:SetJustifyH("LEFT");
 	f.count:SetFormattedText("");
-	 
+
 	-- DoT Text --
 	f.DoTtext = f:CreateFontString(nil, nil, nil)
 	f.DoTtext:SetFontObject(SA_Data.BarFont2);
@@ -1057,7 +920,7 @@ function addon:SA_NewFrame()
 	f.DoTtext:SetPoint("CENTER", f, "CENTER", -12 , 0);
 	f.DoTtext:SetJustifyH("CENTER");
 	f.DoTtext:SetFormattedText("");
-	
+
 	f:SetScript("OnHide", addon.SA_ChangeAnchor);
 	f:SetScript("OnShow", addon.SA_ChangeAnchor);	
 	f:SetScript("OnMouseDown", function(self) if (not SAMod.Main.IsLocked) then SA:StartMoving() end end)
@@ -1094,7 +957,7 @@ function addon:SA_OnLoad()
 	SA_Data.BarFont:SetShadowColor(0,0,0, 0.7);
 	SA_Data.BarFont:SetTextColor(1,1,1,0.9);
 	SA_Data.BarFont:SetShadowOffset(0.8, -0.8);
-	
+
 	SA_Data.BarFont2 = CreateFont("VTimerFont2");
 	SA_Data.BarFont2:SetFont("Fonts\\FRIZQT__.TTF", 8)
 	SA_Data.BarFont2:SetShadowColor(0,0,0, 0.7);
@@ -1111,7 +974,7 @@ function addon:SA_OnLoad()
 	SA_Data.BarFont4:SetFont("Fonts\\FRIZQT__.TTF", 8)
 	SA_Data.BarFont4:SetShadowColor(0,0,0, 0.7); 
 	SA_Data.BarFont4:SetShadowOffset(0.8, -0.8);
-	
+
 	local tCo = SAMod.Energy.TextColor
 	local Co = SAMod.Energy.ComboTextColor
 	VTimerEnergyTxt:SetFontObject(SA_Data.BarFont);
@@ -1119,14 +982,14 @@ function addon:SA_OnLoad()
 	SA_Combo:SetFontObject(SA_Data.BarFont3);
 	SA_Combo:SetTextColor(Co.r,Co.g,Co.b,Co.a)
 
-	VTimerEnergy:SetMinMaxValues(0,UnitPowerMax("player",SPELL_POWER_ENERGY));
+	VTimerEnergy:SetMinMaxValues(0, 12);
 	VTimerEnergy:SetBackdrop({
-				bgFile="Interface\\AddOns\\SliceAdmiral\\Images\\winco_stripe_128.tga",
-				edgeFile="",
-				tile=true, tileSize=1, edgeSize=0,
-				insets={left=-1, right=-1, top=-1, bottom=0}
-				});
-		 
+		bgFile="Interface\\AddOns\\SliceAdmiral\\Images\\winco_stripe_128.tga",
+		edgeFile="",
+		tile=true, tileSize=1, edgeSize=0,
+		insets={left=-1, right=-1, top=-1, bottom=0}
+	});
+
 	VTimerEnergy:SetBackdropBorderColor(1,1,1,1);
 	VTimerEnergy:SetBackdropColor(0,0,0,0.2);
 	VTimerEnergy:SetStatusBarTexture(addon:SA_BarTexture("Energy"));
@@ -1135,27 +998,34 @@ function addon:SA_OnLoad()
 	VTimerEnergy:SetScript("OnShow", addon.SA_ChangeAnchor);
 	local oEner = SAMod.Energy.Color
 	VTimerEnergy:SetStatusBarColor(oEner.r, oEner.g, oEner.b); 
-	VTimerEnergy:SetScript("OnValueChanged",function(self,value)local mi, ma = self:GetMinMaxValues() VTimerEnergyTxt:SetFormattedText(value == ma and "" or UnitPower("player",SPELL_POWER_ENERGY)) end) 
+	
+	VTimerEnergy:SetScript("OnValueChanged",
+		function(self,value) 
+			local mi, ma = self:GetMinMaxValues() 
+			VTimerEnergyTxt:SetFormattedText(12) 
+		end
+	) 
+
 	VTimerEnergy:SetValue(UnitPower("player",SPELL_POWER_ENERGY));
 	scaleUI = VTimerEnergy:GetScale();
 	widthUI = VTimerEnergy:GetWidth();
-		
+
 	S:SmoothBar(VTimerEnergy);
-		
+
 	SA_Data.BARS["CP"]["obj"] = addon:CreateComboFrame();
 	SA_Data.BARS["tmp"]["obj"] = addon:SA_NewFrame()
 	SA_Data.BARS["Stat"]["obj"] = addon:SA_CreateStatBar();
-	
+
 	SA_Data.BARORDER = {}; -- Initial order puts the longest towards the inside.
 	SA_Data.TOPORDER = {};
-	
+
 	for k in pairs(SA_Spells) do
 		local color = SAMod.ShowTimer.Colours[k]
 		local name = SA_Spells[k].name
 		local icont = SA_Spells[k].icon
 		local smax = SAMod.ShowTimer.Timers[k]
 		local toSort = SA_Spells[k].sort
-		
+
 		if SA_Data.BARS[name] and (SA_Data.BARS[name]["obj"] == 0) then
 			SA_Data.BARS[name]["obj"] = addon:SA_NewFrame();
 			SA_Data.BARS[name]["obj"]:SetStatusBarColor(color.r, color.g, color.b);
@@ -1194,7 +1064,7 @@ local function SA_UpdateBar(unit, spell, sa_sound)
 	local lastTick = sabars["LastTick"]
 	local Showname = SAMod.ShowTimer.Options.ShowNames
 	local count = sabars["count"]
-	
+
 	if sa_time > SA_Data.tNow and sabars then
 		sabars["obj"]:SetValue(sa_time-SA_Data.tNow);
 		sabars["obj"].text:SetFormattedText("%0.1f", sa_time-SA_Data.tNow);
@@ -1216,7 +1086,7 @@ local function SA_QuickUpdateBar(unit, spell)
 	local sa_time = sabars["Expires"];
 	local Showname = SAMod.ShowTimer.Options.ShowNames
 	local count = sabars["count"]
-	
+
 	if sa_time > SA_Data.tNow and sabars then
 		sabars["obj"]:SetValue(sa_time-SA_Data.tNow);
 		sabars["obj"].text:SetFormattedText("%0.1f", sa_time - SA_Data.tNow);
@@ -1233,7 +1103,7 @@ function addon:OnUpdate(elapsed)
 		local down, up, lag = GetNetStats();
 		SA_Data.lag = (lag*2/1000)
 	end 
-	
+
 	for k,v in pairs(SATimer) do
 		local spell = SA_Spells[k]
 		local sound = SAMod.Sound[k]
@@ -1243,12 +1113,12 @@ function addon:OnUpdate(elapsed)
 			SA_QuickUpdateBar(spell.target,spell.name);
 		end
 	end
-	
+
 	-- We need to do this sort here because something could have been
 	-- auto refreshed by a proc and we don't get an Update event for that.
 	-- But.. only do it once every SA_Data.sortPeriod seconds AND if we have
 	-- non-zero timers 
-	
+
 	if SATimer.Options.SortBars then
 		if (lastSort > SA_Data.tNow ) then return end
 		for i = 1, #SA_Data.BARORDER do
@@ -1279,15 +1149,15 @@ function addon:SA_Config_VarsChanged()
 	else
 		VTimerEnergy:Hide();
 	end
-	
-	local lManaMax = UnitPowerMax("player",SPELL_POWER_ENERGY);
-	if (lManaMax == 0) then
-		lManaMax = 100
-	end
-	local p1 = SAMod.Energy.Energy1 / lManaMax * SAMod.Main.Width;
-	local p2 = SAMod.Energy.Energy2 / lManaMax * SAMod.Main.Width;
-	SA_Spark1:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", p1, 0);
-	SA_Spark2:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", p2, 0);
+
+--	local lManaMax = UnitPowerMax("player",SPELL_POWER_ENERGY);
+--	if (lManaMax == 0) then
+--		lManaMax = 100
+--	end
+--	local p1 = SAMod.Energy.Energy1 / lManaMax * SAMod.Main.Width;
+--	local p2 = SAMod.Energy.Energy2 / lManaMax * SAMod.Main.Width;
+--	SA_Spark1:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", p1, 0);
+--	SA_Spark2:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", p2, 0);
 
 	if not SACombo.PointShow and not SACombo.AnticipationShow  then   
 		SA_Data.BARS["CP"]["obj"]:Hide();
@@ -1309,7 +1179,7 @@ function addon:SA_Config_VarsChanged()
 	addon:RetextureBars(addon:SA_BarTexture("spells"),"spells");
 	addon:RetextureBars(addon:SA_BarTexture("Energy"),"Energy");
 	addon:RetextureBars(addon:SA_BarTexture("stats"),"stats");
-	
+
 end
 
 function addon:ResetConfig()
@@ -1325,63 +1195,143 @@ function addon:OnInitialize()
 	SAMod = addon.db.profile.Modules
 	addon.opt.profile = LibStub("AceDBOptions-3.0"):GetOptionsTable(addon.db);	
 	addon.opt.Main.args = {
-				version = {name = string.format("%s %s: %s","SliceAdmiral", GAME_VERSION_LABEL, GetAddOnMetadata("SliceAdmiral", "Version")),order=90,type = "header"},
-				lockMovement = {name=L["ClickToMove"],type="toggle",order=1,
-					get = function(info) return SAMod.Main.IsLocked; end,
-					set = function(info,val) SAMod.Main.IsLocked = val; SA:EnableMouse(not val); VTimerEnergy:EnableMouse(not val);
-					for k in pairs(SA_Data.BARS) do SA_Data.BARS[k]["obj"]:EnableMouse(not val); end end
-				},
-				padLatency = {name=L["PadLatency"],type="toggle",order=3, width="full",
-					get = function(info) return SAMod.Main.PadLatency; end,
-					set = function(info,val) SAMod.Main.PadLatency = val; end
-				},
-				resetPost = {name=L["ResetPossition"], type = "execute", order=2,
-					desc = L["ResetPositionDecs"],
-					func = function()
-						if (InCombatLockdown()) then 
-							addon:Print(ERR_NOT_IN_COMBAT);
-						else
-							SA:ClearAllPoints();SA:SetPoint("TOPLEFT", 100, -150);
-							SAMod.Main.point, _l, _l, SAMod.Main.xOfs, SAMod.Main.yOfs = SA:GetPoint()
-						end
-					end
-				},
-				mainInfo = {name = L["Main/info"], type = "description", order=4,width="full", },
-				addonScale = {name=L["Main/Scale"],type="range",width="normal",order=11,
-					min=50,max=200,step=1,
-					get = function(info) return SAMod.Main.Scale; end,
-					set = function(info,val) SAMod.Main.Scale = val; addon:SA_SetScale(val); end
-				}, 
-				barWidth = {name=L["Main/Width"],type="range",width="normal",order=12,
-					min=25,max=300,step=5,
-					get = function(info) return SAMod.Main.Width; end,
-					set = function(info,val) SAMod.Main.Width = val; addon:SA_SetWidth(val); end
-				},
-				empty = {name="",type="description",order=13,},
-				fade = {name=L["Main/oocFade"],type="range",width="normal",order=14,
-					min=0,max=100,step=1,
-					get = function(info) return SAMod.Main.Fade; end,
-					set = function(info,val) SAMod.Main.Fade = val; SA:SetAlpha(val/100); end
-				},
-				barTexture = {name=L["Main/Texture"],type="select",order=15, dialogControl = 'LSM30_Statusbar',
-					values = LSM:HashTable("statusbar"),
-					get = function(info) return SAMod.Main.BarTexture; end,
-					set = function(info,val) SAMod.Main.BarTexture = val; addon:RetextureBars(LSM:Fetch("statusbar",val),"stats"); end
-				},
-				
-				reset = {name = L["ResetDatabase"],type = "execute",order=100,width="full",
-					desc = L["ResetDatabaseDesc"],
-					func = function()
-						if (InCombatLockdown()) then
-							addon:Print(ERR_NOT_IN_COMBAT);
-						else
-							addon.db:ResetDB();
-							ReloadUI();
-						end
-					end
-				},
-			}
-	
+		version = {
+			name = string.format("%s %s: %s","SliceAdmiral", GAME_VERSION_LABEL, GetAddOnMetadata("SliceAdmiral", "Version")),
+			order=90,type = "header"
+		},
+		lockMovement = {
+			name=L["ClickToMove"],
+			type="toggle",
+			order=1,
+			get = function(info) 
+				return SAMod.Main.IsLocked; 
+			end,
+			set = function(info,val) 
+				SAMod.Main.IsLocked = val; 
+				SA:EnableMouse(not val); 
+				VTimerEnergy:EnableMouse(not val);
+				for k in pairs(SA_Data.BARS) do 
+					SA_Data.BARS[k]["obj"]:EnableMouse(not val); 
+				end 
+			end
+		},
+		padLatency = {
+			name=L["PadLatency"],
+			type="toggle",
+			order=3, 
+			width="full",
+			get = function(info) 
+				return SAMod.Main.PadLatency; 
+			end,
+			set = function(info,val) 
+				SAMod.Main.PadLatency = val; 
+			end
+		},
+		resetPost = {
+			name=L["ResetPossition"], 
+			type = "execute", 
+			order=2,
+			desc = L["ResetPositionDecs"],
+			func = function()
+				if (InCombatLockdown()) then 
+					addon:Print(ERR_NOT_IN_COMBAT);
+				else
+					SA:ClearAllPoints();SA:SetPoint("TOPLEFT", 100, -150);
+					SAMod.Main.point, _l, _l, SAMod.Main.xOfs, SAMod.Main.yOfs = SA:GetPoint()
+				end
+			end
+		},
+		mainInfo = {
+			name = L["Main/info"], 
+			type = "description", 
+			order=4,
+			width="full", 
+		},
+		addonScale = {
+			name=L["Main/Scale"],
+			type="range",
+			width="normal",
+			order=11,
+			min=50,
+			max=200,
+			step=1,
+			get = function(info) 
+				return SAMod.Main.Scale; 
+			end,
+			set = function(info,val)
+				SAMod.Main.Scale = val; 
+				addon:SA_SetScale(val); 
+			end
+		}, 
+		barWidth = {
+			name=L["Main/Width"],
+			type="range",
+			width="normal",
+			order=12,
+			min=25,
+			max=300,
+			step=5,
+			get = function(info) 
+				return SAMod.Main.Width; 
+			end,
+			set = function(info,val) 
+				SAMod.Main.Width = val; 
+				addon:SA_SetWidth(val); 
+			end
+		},
+		empty = {
+			name="",
+			type="description",
+			order=13,
+		},
+		fade = {
+			name=L["Main/oocFade"],
+			type="range",
+			width="normal",
+			order=14,
+			min=0,
+			max=100,
+			step=1,
+			get = function(info) 
+				return SAMod.Main.Fade; 
+			end,
+			set = function(info,val) 
+				SAMod.Main.Fade = val; 
+				SA:SetAlpha(val/100); 
+			end
+		},
+		barTexture = {
+			name=L["Main/Texture"],
+			type="select",
+			order=15, 
+			dialogControl = 'LSM30_Statusbar',
+			values = LSM:HashTable("statusbar"),
+			get = function(info) 
+				return SAMod.Main.BarTexture; 
+			end,
+			set = function(info,val) 
+				SAMod.Main.BarTexture = val; 
+				addon:RetextureBars(LSM:Fetch("statusbar",val),"stats"); 
+			end
+		},
+		reset = {
+			name = L["ResetDatabase"],
+			type = "execute",
+			order=100,
+			width="full",
+			desc = L["ResetDatabaseDesc"],
+			func = function()
+				if (InCombatLockdown()) then
+					addon:Print(ERR_NOT_IN_COMBAT);
+				else
+					addon.db:ResetDB();
+					ReloadUI();
+				end
+			end
+		},
+	}
+
+			
 	-- Add dual-spec support
 	--local LibDualSpec = LibStub('LibDualSpec-1.0')
 	--LibDualSpec:EnhanceDatabase(self.db, "SliceAdmiral")
@@ -1419,20 +1369,22 @@ function addon:OnEnable()
 	AceConfig:RegisterOptionsTable("SliceAdmiral", addon.opt.Main);
 	self.optionsFrame = AceConfigDialog:AddToBlizOptions("SliceAdmiral");
 	if addon:GetModule("ShowTimer", true) then addon:AddOption("ShowTimer Bars", addon.opt.ShowTimer, L["TimerBars"]); end;
-    if addon:GetModule("Combo", true) then addon:AddOption("Combo Points", addon.opt.Combo, L["Combo"]) end
-    if addon:GetModule("Energy", true) then addon:AddOption("Energy Bar", addon.opt.Energy, L["EnergyBar"]) end
+	if addon:GetModule("Combo", true) then addon:AddOption("Combo Points", addon.opt.Combo, L["Combo"]) end
+	if addon:GetModule("Energy", true) then addon:AddOption("Energy Bar", addon.opt.Energy, L["EnergyBar"]) end
 	--addon:AddOption("Profiles", addon.opt.profile, "Profiles"); --Localization Needed
 	local localizedClass, englishClass = UnitClass("player");
 	local point, xOfs, yOfs = SAMod.Main.point, SAMod.Main.xOfs, SAMod.Main.yOfs
-	if (englishClass == "ROGUE") then
+	print("Honk: 2");
+	print(englishClass);
+	if (englishClass == "WARLOCK") then
 		for k in pairs(SA_Spells) do
 			SA_Data.BARS[SA_Spells[k].name] = {	
-					["obj"] = 0,
-					["Expires"] = 0,		-- expire time until GetTime()
-					["LastTick"] = 0,
-					["tickStart"] = 0,
-					["count"] = 0,
-					["id"]=SA_Spells[k].id or 0,
+				["obj"] = 0,
+				["Expires"] = 0,		-- expire time until GetTime()
+				["LastTick"] = 0,
+				["tickStart"] = 0,
+				["count"] = 0,
+				["id"]=SA_Spells[k].id or 0,
 			}
 		end
 		addon:SA_OnLoad()

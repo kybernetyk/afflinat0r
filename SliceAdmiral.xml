@@ -30,23 +30,7 @@
 						</FontString>
 					</Layer>
 					<Layer level="OVERLAY">
-						<Texture name="SA_Spark1" file="Interface\CastingBar\UI-CastingBar-Spark" alphaMode="ADD">
-							<Size x="3" y="20" />
-							<Anchors>
-								<Anchor point="TOPLEFT" relativeTo="VTimerEnergy" relativePoint="TOPLEFT">
-									<Offset x="50" y="0" />
-								</Anchor>
-							</Anchors>
-						</Texture>
-						<Texture name="SA_Spark2" file="Interface\CastingBar\UI-CastingBar-Spark" alphaMode="ADD">
-							<Size x="3" y="20" />
-							<Anchors>
-								<Anchor point="TOPLEFT" relativeTo="VTimerEnergy" relativePoint="TOPLEFT">
-									<Offset x="80" y="0" />
-								</Anchor>
-							</Anchors>
-						</Texture>
-					</Layer>
+				</Layer>
 				</Layers>
 				<BarColor r="1" g="0.843137264" b="0" />
 			</StatusBar>
