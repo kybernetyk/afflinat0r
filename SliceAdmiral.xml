@@ -3,7 +3,7 @@
 	<Frame name="SA" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
 		<Size x="140" y="30" />
 		<Frames>
-			<StatusBar name="VTimerEnergy" minValue="0" maxValue="100" defaultValue="100">
+			<StatusBar name="VTimerEnergy" minValue="0" maxValue="12" defaultValue="0">
 				<Size x="200" y="20" />
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeTo="SA" relativePoint="TOPLEFT">

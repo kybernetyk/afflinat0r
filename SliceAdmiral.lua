@@ -77,7 +77,7 @@ SADefault = {
 			AnticipationShow = true,
 			ShowStatBar = true,
 			HilightBuffed = false,
-			CPColor = {r=0.7,g=0.2,b=0.96,a=1.0},
+			CPColor = {r=0.0,g=0.88,b=0.0,a=1.0},
 			AnColor = {r=1.0,g=0.15,b=0.2,a=1.0},
 		},
 		Energy  = {
@@ -193,10 +193,10 @@ function addon:SA_SetWidth(w)
 		end	
 		if SAMod.Energy.ShowEnergy then
 			VTimerEnergy:Show();
-			local UnitPowerMax = UnitPowerMax("player",SPELL_POWER_ENERGY)
-			if (UnitPowerMax == 0) then
-				UnitPowerMax = 100;
-			end
+			-- local UnitPowerMax = UnitPowerMax("player",SPELL_POWER_ENERGY)
+			-- if (UnitPowerMax == 0) then
+			-- 	UnitPowerMax = 100;
+			-- end
 --			SA_Spark1:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", (SAMod.Energy.Energy1 / UnitPowerMax * w), 0);
 	--		SA_Spark2:SetPoint("TOPLEFT", VTimerEnergy, "TOPLEFT", (SAMod.Energy.Energy2 / UnitPowerMax * w), 0);
 		else
@@ -981,7 +981,7 @@ function addon:SA_OnLoad()
 		bgFile="Interface\\AddOns\\SliceAdmiral\\Images\\winco_stripe_128.tga",
 		edgeFile="",
 		tile=true, tileSize=1, edgeSize=0,
-		insets={left=-1, right=-1, top=-1, bottom=0}
+		insets={left=0, right=0, top=0, bottom=0}
 	});
 
 	VTimerEnergy:SetBackdropBorderColor(1,1,1,1);
@@ -1378,7 +1378,7 @@ function addon:OnEnable()
 	--addon:AddOption("Profiles", addon.opt.profile, "Profiles"); --Localization Needed
 	local localizedClass, englishClass = UnitClass("player");
 	local point, xOfs, yOfs = SAMod.Main.point, SAMod.Main.xOfs, SAMod.Main.yOfs
-	print("Honk: 2");
+	print("afflinat0r v0.0.2 loaded...");
 	print(englishClass);
 	if (englishClass == "WARLOCK") then
 		for k in pairs(SA_Spells) do
