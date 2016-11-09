@@ -77,7 +77,7 @@ SADefault = {
 			AnticipationShow = true,
 			ShowStatBar = true,
 			HilightBuffed = false,
-			CPColor = {r=1.0,g=0.86,b=0.1,a=1.0},
+			CPColor = {r=0.7,g=0.2,b=0.96,a=1.0},
 			AnColor = {r=1.0,g=0.15,b=0.2,a=1.0},
 		},
 		Energy  = {
@@ -90,7 +90,7 @@ SADefault = {
 			EnergySound1 = "",
 			EnergySound2 = "",
 			EnergyTrans = 75,
-			Color = { r=1.0, g=0.96, b=0.41, a=1.0},
+			Color = {r=0.1, g=0.6, b=0.8},
 			TextColor = { r=1.0, g=1.0, b=1.0, a=0.9},
 			ComboTextColor = { r=1.0, g=1.0, b=1.0, a=0.8},
 		},
